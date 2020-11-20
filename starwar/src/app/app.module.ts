@@ -10,14 +10,20 @@ import { FormsModule } from '@angular/forms';
 import { PlanetsService } from './services/planets.service';
 import { PlanetsListadoComponent } from './planets-listado/planets-listado.component';
 
+import {MatTableModule} from '@angular/material/table';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatIconModule} from '@angular/material/icon';
+
 @NgModule({
   imports: [
     BrowserModule,
-    // import HttpClientModule after BrowserModule.
     HttpClientModule,
     BrowserAnimationsModule,
     FlexLayoutModule,
-    FormsModule
+    FormsModule,
+    MatTableModule,
+    MatToolbarModule,
+    MatIconModule
   ],
   providers: [PlanetsService],
   declarations: [

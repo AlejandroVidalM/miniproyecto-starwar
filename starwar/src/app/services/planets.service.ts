@@ -5,6 +5,12 @@ import { PlanetResponse } from '../model/interface/planets-response.interface';
 
 
 const authURL = 'https://swapi.co/api/planets/';
+const requestOptions = {
+  headers: new HttpHeaders({
+    'Content-Type': 'application/json'
+  })
+};
+
 @Injectable({
   providedIn: 'root'
 })

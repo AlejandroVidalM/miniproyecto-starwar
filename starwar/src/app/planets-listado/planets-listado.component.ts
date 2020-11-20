@@ -18,6 +18,13 @@ export class PlanetsListadoComponent implements OnInit {
 
 
   ngOnInit(): void {
+    this.loadPlanets();
   }
+  loadPlanets() {
+    this.planetService.getPlanets().subscribe(resp => {
+       this.listadoPlanetas = resp.results;
+    });
+ }
+
 
 }
