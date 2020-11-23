@@ -13,6 +13,8 @@ import { PlanetsListadoComponent } from './planets-listado/planets-listado.compo
 import {MatTableModule} from '@angular/material/table';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
+import { FilmsService } from './services/films.service';
+import { FilmsListadoComponent } from './films-listado/films-listado.component';
 
 @NgModule({
   imports: [
@@ -25,10 +27,11 @@ import {MatIconModule} from '@angular/material/icon';
     MatToolbarModule,
     MatIconModule
   ],
-  providers: [PlanetsService],
+  providers: [PlanetsService, FilmsService],
   declarations: [
     AppComponent,
     PlanetsListadoComponent,
+    FilmsListadoComponent,
   ],
   bootstrap: [ AppComponent ]
 })
